@@ -27,9 +27,9 @@ class page {
 
     public function __construct() {
         $this->navtitle = "Style Editor Sub Menu";
-        $this->navlist[] = array("Edit CSS", "css.png", "css");
+        $this->navlist[] = array("修改CSS", "css.png", "css");
         //$this->navlist[] = array("Edit Header Template", "xhtml.png", "header");
-        $this->navlist[] = array("Edit Templates", "xhtml.png", "tpls");
+        $this->navlist[] = array("修改主题", "xhtml.png", "tpls");
     }
 
     public function description() {
@@ -40,7 +40,7 @@ class page {
 
     private function checkWritable($file) {
         if(!is_writable($file)){
-            return "<i>Cannot edit file, please CHMOD to 666</i>";
+            return "<i>不能编辑文件。请修改权限为666。</i>";
         }
         else{
             return '<input type="submit" value="Save it!" name="editme" id="editme" />';
@@ -88,7 +88,7 @@ class page {
                   $css['EDITED'] = "Edited CSS Successfully";
               }
               else {
-                $css['EDITED'] = "Editing CSS Style..";
+                $css['EDITED'] = "更换CSS风格中..";
               }
               $url = $db->config('url')."themes/".$db->config('theme')."/images/";
               $filetochange = LINK."../themes/".$db->config('theme')."/style.css";
