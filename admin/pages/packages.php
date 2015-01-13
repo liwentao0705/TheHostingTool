@@ -27,16 +27,16 @@ class page {
     public $defaultNav;
 
     public function __construct() {
-        $this->navtitle = "Packages Sub Menu";
-        $this->navlist[] = array("Add Packages", "package_add.png", "add");
-        $this->navlist[] = array("Edit Packages", "package_go.png", "edit");
-        $this->navlist[] = array("Delete Packages", "package_delete.png", "delete");
+        $this->navtitle = "包子菜单";
+        $this->navlist[] = array("添加包", "package_add.png", "add");
+        $this->navlist[] = array("修改包", "package_go.png", "edit");
+        $this->navlist[] = array("删除包", "package_delete.png", "delete");
         $this->defaultNav = 1;
     }
 
     public function description() {
         return "<strong>Managing Packages</strong><br />
-        Welcome to the Package Management Area. Here you can add, edit and delete web hosting packages. Have fun :)<br />
+        欢迎来到包管理区域。 在这里你可以添加，修改和删除空间配置包。Have fun :)<br />
         To get started, choose a link from the sidebar's SubMenu.";
     }
 
