@@ -27,7 +27,7 @@ class page {
 
     public function __construct() {
         $this->navtitle = "Mail Center Sub Menu";
-        $this->navlist[] = array("Email Templates", "email_open.png", "templates");
+        $this->navlist[] = array("邮件模板", "email_open.png", "templates");
         $this->navlist[] = array("Mass Emailer", "transmit.png", "mass");
     }
 

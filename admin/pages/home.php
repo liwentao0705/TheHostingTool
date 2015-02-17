@@ -88,7 +88,7 @@ class page {
                     // We can use $_POST here because updateResource cleans it.
                     $db->updateResource($key, $value);
                 }
-                $main->errors("Settings Updated!");
+                $main->errors("设置已更新!");
                 $main->done();
             }
         }
@@ -116,6 +116,6 @@ class page {
             $news .= $style->replaceVar('tpl/newsitem.tpl', $array);
         }
         echo "<br />";
-        echo $main->table('THT News & Updates', $news);
+        echo $main->table('THT 新闻 & 更新', $news);
     }
 }
