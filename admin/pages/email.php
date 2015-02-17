@@ -26,14 +26,14 @@ class page {
     public $navlist = array();
 
     public function __construct() {
-        $this->navtitle = "Mail Center Sub Menu";
+        $this->navtitle = "邮件管理";
         $this->navlist[] = array("邮件模板", "email_open.png", "templates");
         $this->navlist[] = array("Mass Emailer", "transmit.png", "mass");
     }
 
     public function description() {
-        return "<strong>Mail Center</strong><br />
-        Welcome to the Mail. Here you can edit your email templates or send a mass email to all your users.<br />";
+        return "<strong>邮件中心</strong><br />
+        欢迎来到邮件中心。 在这里你可以编辑邮件模板，或者给你的客户发送邮件。<br />";
     }
 
     public function content() { # Displays the page
@@ -45,7 +45,7 @@ class page {
                 if($_POST) {
                     foreach($main->postvar as $key => $value) {
                         if($value == "" && !$n) {
-                            $main->errors("Please fill in all the fields!");
+                            $main->errors("请把所有需要填写的内容填满!");
                             $n++;
                         }
                     }
